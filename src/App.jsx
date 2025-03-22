@@ -33,13 +33,13 @@ const NonTeachingStaff = lazy(() =>
 
 //Academics
 const Overview = lazy(() =>
-  import("./components/pageComponents/Academics/Overview")
+  import("./components/pageComponents/Academics/overview")
 );
 const DiplomaProgramme = lazy(() =>
-  import("./components/pageComponents/Academics/Diploma")
+  import("./components/pageComponents/Academics/diploma")
 );
 const UnderGraduateProgramme = lazy(() =>
-  import("./components/pageComponents/Academics/UnderGraduate")
+  import("./components/pageComponents/Academics/undnergraduate")
 );
 
 const Admissions = lazy(() => import("./pages/Admin/Admissions"));
