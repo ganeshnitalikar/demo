@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import ContactBar from "./components/Common/ContactBar";
-import Breadcrumb from "./components/Common/Breadcrumb";
 
 // Home
 const Home = lazy(() => import("./pages/Home"));
@@ -79,15 +78,7 @@ function App() {
             element={<NonTeachingStaff />}
           />
           {/* Academics Routes */}
-          <Route
-            path="/academics"
-            element={
-              <div>
-                <Breadcrumb />
-                Academics
-              </div>
-            }
-          />
+          <Route path="/academics" element={<div>Academics</div>} />
           <Route
             path="/academics/under-graduate-programme"
             element={<UnderGraduateProgramme />}
