@@ -1,17 +1,27 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import ContactBar from "./components/Common/ContactBar";
+import Breadcrumb from "./components/Common/Breadcrumb";
 
+// Home
+const Home = lazy(() => import("./pages/Home"));
 const Navbar = lazy(() => import("./components/Common/Navbar"));
 const Footer = lazy(() => import("./components/Common/Footer"));
-const Home = lazy(() => import("./pages/Home"));
+
+//About
+const About = lazy(() => import("./components/pageComponents/About/About"));
 const InstituteAtGlance = lazy(() =>
   import("./components/pageComponents/About/InstituteAtGlance")
 );
-const Login = lazy(() => import("./pages/Login"));
-const Dashboard = lazy(() => import("./pages/Admin/Dashboard"));
-const ProtectedRoute = lazy(() => import("./components/protectedRoute"));
-const Admissions = lazy(() => import("./pages/Admin/Admissions"));
+const PrincipalMessage = lazy(() =>
+  import("./components/pageComponents/About/PrincipalMessage")
+);
+
+// Management
+
+const Principal = lazy(() =>
+  import("./components/pageComponents/Management/Principal")
+);
 const Faculty = lazy(() =>
   import("./components/pageComponents/Management/Faculty")
 );
@@ -21,17 +31,26 @@ const FacultyDetail = lazy(() =>
 const NonTeachingStaff = lazy(() =>
   import("./components/pageComponents/Management/NonTeachingStaff")
 );
-const About = lazy(() => import("./components/pageComponents/About/About"));
-const Principal = lazy(() =>
-  import("./components/pageComponents/Management/Principal")
-);
+
+//Academics
 const Overview = lazy(() =>
   import("./components/pageComponents/Academics/Overview")
 );
-const PrincipalMessage = lazy(() =>
-  import("./components/pageComponents/About/PrincipalMessage")
+const DiplomaProgramme = lazy(() =>
+  import("./components/pageComponents/Academics/Diploma")
+);
+const UnderGraduateProgramme = lazy(() =>
+  import("./components/pageComponents/Academics/UnderGraduate")
 );
 
+const Admissions = lazy(() => import("./pages/Admin/Admissions"));
+
+// Admin
+const Login = lazy(() => import("./pages/Login"));
+const Dashboard = lazy(() => import("./pages/Admin/Dashboard"));
+const ProtectedRoute = lazy(() => import("./components/protectedRoute"));
+
+//No page found
 const NoPageFound = lazy(() => import("./pages/NoPageFound"));
 
 function App() {
@@ -60,7 +79,23 @@ function App() {
             element={<NonTeachingStaff />}
           />
           {/* Academics Routes */}
-          <Route path="/academics" element={<div>Academics</div>} />
+          <Route
+            path="/academics"
+            element={
+              <div>
+                <Breadcrumb />
+                Academics
+              </div>
+            }
+          />
+          <Route
+            path="/academics/under-graduate-programme"
+            element={<UnderGraduateProgramme />}
+          />
+          <Route
+            path="/academics/diploma-programmes"
+            element={<DiplomaProgramme />}
+          />
 
           <Route path="/academics/overview" element={<Overview />} />
 
