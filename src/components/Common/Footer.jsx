@@ -13,18 +13,21 @@ const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white text-sm">
       {/* First Row - Logo & NAAC Affiliation */}
-      <div className="flex flex-col md:flex-row justify-between items-center px-10 py-6 border-b border-gray-700">
-        <div className="flex items-center space-x-4">
-          <img src={logo} alt="College Logo" className="h-40" />
-          <h2 className="text-xl font-bold">
+      <div className="flex flex-col md:flex-row justify-between items-center px-6 md:px-10 py-4 md:py-6 border-b border-gray-700 text-center md:text-left">
+        {/* Logo and Title */}
+        <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-4">
+          <img src={logo} alt="College Logo" className="h-24 md:h-40 w-auto" />
+          <h2 className="text-lg md:text-xl font-bold text-white">
             Dr. D. Y. Patil College of Pharmacy
           </h2>
         </div>
-        <div className="text-center md:text-right">
-          <p className="text-yellow-400 font-semibold">
+
+        {/* Accreditation Info */}
+        <div className="text-center md:text-right mt-4 md:mt-0">
+          <p className="text-yellow-400 font-semibold text-sm md:text-base">
             NAAC Accredited Institution
           </p>
-          <p className="text-gray-400">
+          <p className="text-gray-400 text-xs md:text-sm">
             Affiliated to Savitribai Phule Pune University
           </p>
         </div>
