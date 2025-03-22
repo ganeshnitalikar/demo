@@ -10,7 +10,7 @@ const InstituteAtGlance = lazy(() =>
 );
 const Login = lazy(() => import("./pages/Login"));
 const Dashboard = lazy(() => import("./pages/Admin/Dashboard"));
-const ProtectedRoute = lazy(() => import("./components/ProtectedRoute"));
+const ProtectedRoute = lazy(() => import("./components/protectedRoute"));
 const Admissions = lazy(() => import("./pages/Admin/Admissions"));
 const Faculty = lazy(() =>
   import("./components/pageComponents/Management/Faculty")
