@@ -39,7 +39,7 @@ const DiplomaProgramme = lazy(() =>
   import("./components/pageComponents/Academics/diploma")
 );
 const UnderGraduateProgramme = lazy(() =>
-  import("./components/pageComponents/Academics/undnergraduate")
+  import("./components/pageComponents/Academics/undergraduate")
 );
 
 const Admissions = lazy(() => import("./pages/Admin/Admissions"));
