@@ -1,10 +1,10 @@
 import React from "react";
-import Breadcrumb from "../../Common/Breadcrumb";
+import BreadCrumb from "../../Common/BreadCrumb";
 
 const InstituteAtGlance = () => {
   return (
     <section className="bg-white py-16 px-6 md:px-20">
-      <Breadcrumb />
+      <BreadCrumb />
       <div className="max-w-5xl mx-auto text-center">
         <h2 className="text-4xl font-bold text-blue-700">
           Institute at a Glance

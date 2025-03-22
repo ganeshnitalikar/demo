@@ -1,10 +1,10 @@
 import React from "react";
-import Breadcrumb from "../../Common/Breadcrumb";
+import BreadCrumb from "../../Common/BreadCrumb";
 
 const PrincipalMessage = () => {
   return (
     <section className="bg-gray-50 py-16 px-6 md:px-20 text-gray-800">
-      <Breadcrumb />
+      <BreadCrumb />
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-4xl font-bold text-blue-700">
           Principal’s Message
