@@ -45,7 +45,11 @@ const Navbar = () => {
             {[
               {
                 name: "About Us",
-                subItems: ["Institute At Glance", "Principal's Message"],
+                subItems: [
+                  "Institute At Glance",
+                  "President's Message",
+                  "Principal's Message",
+                ],
               },
               {
                 name: "Management",

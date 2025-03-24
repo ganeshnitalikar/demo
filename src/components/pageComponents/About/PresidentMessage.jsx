@@ -1,22 +1,19 @@
 import React from "react";
-import presidentImage from "../../assets/president.jpg"; // Add an image of the president
 
 const PresidentMessage = () => {
   return (
     <section className="bg-gray-100 py-16 px-6 md:px-20">
       <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
-        {/* ✅ President's Image */}
         <div className="relative w-full">
           <img
-            src={presidentImage}
-            alt="President"
+            src=""
+            alt="President_img"
             className="w-full h-96 object-cover"
           />
         </div>
 
-        {/* ✅ Message Content */}
         <div className="p-8 text-center">
-          <h2 className="text-4xl font-bold text-blue-700 mb-4">
+          <h2 className="text-4xl font-bold text-neutral-950 mb-4">
             President's Message
           </h2>
           <p className="text-lg text-gray-700 leading-relaxed">

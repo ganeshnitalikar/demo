@@ -15,6 +15,9 @@ const InstituteAtGlance = lazy(() =>
 const PrincipalMessage = lazy(() =>
   import("./components/pageComponents/About/PrincipalMessage")
 );
+const PresidentMessage = lazy(() =>
+  import("./components/pageComponents/About/PresidentMessage")
+);
 
 // Management
 
@@ -102,6 +105,10 @@ function App() {
           <Route
             path="/about/principal's-message"
             element={<PrincipalMessage />}
+          />
+          <Route
+            path="/about/president's-message"
+            element={<PresidentMessage />}
           />
           {/* Management Route */}
           <Route path="/management/faculty" element={<Faculty />} />
