@@ -9,7 +9,7 @@ const HeroSection = () => {
         <Link to="/admission">
           <button
             className=" 
-        bg-blue-500
+        bg-green-500
         p-2
         text-white 
         text-2xl

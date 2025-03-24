@@ -17,8 +17,9 @@ const VisionMission = () => {
         <div className="relative z-10">
           <h2 className="text-3xl font-bold">Mission</h2>
           <p className="mt-4 text-lg max-w-md">
-            Our mission is to foster innovation, research, and academic
-            excellence to empower students for a bright future.
+            Empowering Future Pharmacists – Provide a dynamic learning
+            environment that nurtures professional competence, leadership, and
+            ethical responsibility in pharmaceutical sciences.
           </p>
           <button className="mt-6 bg-white text-blue-600 px-6 py-2 rounded-md font-semibold hover:bg-gray-200 transition-all">
             Read More
@@ -40,8 +41,9 @@ const VisionMission = () => {
         <div className="relative z-10">
           <h2 className="text-3xl font-bold">Vision</h2>
           <p className="mt-4 text-lg max-w-md">
-            Our vision is to be a globally recognized institution, producing
-            leaders and professionals who drive progress.
+            To be a center of excellence in pharmaceutical education, research,
+            and innovation, shaping future pharmacists who contribute to global
+            healthcare advancements with integrity, knowledge, and compassion.
           </p>
           <button className="mt-6 bg-white text-blue-600 px-6 py-2 rounded-md font-semibold hover:bg-gray-200 transition-all">
             Read More

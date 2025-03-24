@@ -9,7 +9,7 @@ const BreadCrumb = () => {
     <nav className="text-sm py-4 px-6 bg-gray-100">
       <ul className="flex space-x-2">
         <li>
-          <Link to="/" className="text-blue-600 hover:underline">
+          <Link to="/" className="text-green-600 hover:underline">
             Home
           </Link>
         </li>
@@ -27,7 +27,7 @@ const BreadCrumb = () => {
               ) : (
                 <Link
                   to={routeTo}
-                  className="text-blue-600 hover:underline capitalize"
+                  className="text-green-600 hover:underline capitalize"
                 >
                   {name.replace("-", " ")}
                 </Link>
