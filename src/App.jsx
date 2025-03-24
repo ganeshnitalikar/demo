@@ -18,6 +18,9 @@ const PrincipalMessage = lazy(() =>
 const PresidentMessage = lazy(() =>
   import("./components/pageComponents/About/PresidentMessage")
 );
+const SecretaryMessage = lazy(() =>
+  import("./components/pageComponents/About/SecretaryMessage")
+);
 
 // Management
 
@@ -32,6 +35,9 @@ const FacultyDetail = lazy(() =>
 );
 const NonTeachingStaff = lazy(() =>
   import("./components/pageComponents/Management/NonTeachingStaff")
+);
+const GoverningBody = lazy(() =>
+  import("./components/pageComponents/Management/GoverningBody")
 );
 
 //Academics
@@ -110,6 +116,10 @@ function App() {
             path="/about/president's-message"
             element={<PresidentMessage />}
           />
+          <Route
+            path="/about/secretary's-message"
+            element={<SecretaryMessage />}
+          />
           {/* Management Route */}
           <Route path="/management/faculty" element={<Faculty />} />
           <Route path="/management/principal" element={<Principal />} />
@@ -117,6 +127,10 @@ function App() {
           <Route
             path="/management/non-teaching-staff"
             element={<NonTeachingStaff />}
+          />
+          <Route
+            path="/management/governing-body"
+            element={<GoverningBody />}
           />
           {/* Academics Routes */}
           <Route path="/academics" element={<div>Academics</div>} />

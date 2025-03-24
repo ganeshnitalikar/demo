@@ -1,43 +1,45 @@
 import React from "react";
+import BreadCrumb from "../../Common/BreadCrumb";
+import presidentImg from "../../../assets/presidentImg.jpeg";
 
 const PresidentMessage = () => {
   return (
-    <section className="bg-gray-100 py-16 px-6 md:px-20">
-      <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
-        <div className="relative w-full">
+    <section className="bg-gray-50 py-16 px-6 md:px-20 text-gray-800">
+      <BreadCrumb />
+      <div className="shadow-lg max-w-4xl mx-auto text-center flex justify-center items-center w-full">
+        <div className="w-[30%] bg-white p-8 mt-6 rounded-lg min-h-full">
           <img
-            src=""
+            src={presidentImg}
             alt="President_img"
-            className="w-full h-96 object-cover"
+            className="max-h-200 w-auto"
           />
         </div>
 
-        <div className="p-8 text-center">
-          <h2 className="text-4xl font-bold text-neutral-950 mb-4">
-            President's Message
+        <div className="bg-white w-[70%] p-8 mt-6 rounded-lg flex gap-2 flex-col justify-center items-center">
+          <h2 className="text-4xl font-bold text-neutral-700 my-4">
+            President’s Message
           </h2>
-          <p className="text-lg text-gray-700 leading-relaxed">
+          <p className="text-lg italic text-justify">
             "Education serves as the cornerstone of a prosperous career. At{" "}
             <strong>
               Sahakar Maharshi Kisanrao Varal Patil College of Pharmacy
             </strong>
             , we are committed to providing a nurturing environment that fosters
-            both academic excellence and personal growth.
+            both academic excellence and personal growth. Our mission is to
+            empower students, especially those from rural backgrounds, by
+            unlocking their innate potential and contributing to national
+            development.
           </p>
-          <p className="text-lg text-gray-700 leading-relaxed mt-4">
-            Our mission is to empower students, especially those from rural
-            backgrounds, by unlocking their innate potential and contributing to
-            national development. We strive to equip our students with the
-            knowledge and skills necessary to excel in the dynamic field of
-            pharmacy and to make meaningful contributions to society."
+          <p className="text-lg italic text-justify">
+            We strive to equip our students with the knowledge and skills
+            necessary to excel in the dynamic field of pharmacy and to make
+            meaningful contributions to society."
           </p>
 
-          <div className="mt-6 text-center">
-            <h3 className="text-2xl font-semibold text-gray-800">
-              Mr. Rangnath Kisanrao Varal Patil
-            </h3>
-            <p className="text-gray-600 text-lg">Hon. President</p>
-          </div>
+          <h3 className="mt-4 text-xl font-semibold">
+            Mr. Rangnath Kisanrao Varal Patil
+          </h3>
+          <p className="text-gray-600">Hon. President</p>
         </div>
       </div>
     </section>

@@ -22,13 +22,12 @@ const Navbar = () => {
 
   return (
     <nav className="bg-green-300 text-white  w-full">
-      <CollegeBanner />
+      <Link to="/">
+        <CollegeBanner />
+      </Link>
 
-      {/* ✅ Full-width background with centered content */}
       <div className=" w-full bg-green-900 flex justify-center">
-        {/* ✅ Restricting inner content to screen size */}
         <div className="w-full max-w-screen-xl flex justify-center">
-          {/* Mobile Menu Button */}
           <button
             className="md:hidden text-white mb-2"
             onClick={() => setMenuOpen(!menuOpen)}
@@ -36,7 +35,6 @@ const Navbar = () => {
             ☰
           </button>
 
-          {/* Navigation Menu */}
           <ul
             className={`md:flex md:justify-center md:space-x-6 w-full md:w-auto bg-green-900 absolute md:static left-0 top-16 md:top-auto transition-all duration-300 ease-in ${
               menuOpen ? "block" : "hidden md:flex"
@@ -48,12 +46,18 @@ const Navbar = () => {
                 subItems: [
                   "Institute At Glance",
                   "President's Message",
+                  "Secretary's Message",
                   "Principal's Message",
                 ],
               },
               {
                 name: "Management",
-                subItems: ["Principal", "Faculty", "Non-Teaching Staff"],
+                subItems: [
+                  "Principal",
+                  "Faculty",
+                  "Non-Teaching Staff",
+                  "Governing Body",
+                ],
               },
               {
                 name: "Academics",
