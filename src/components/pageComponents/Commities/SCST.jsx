@@ -3,68 +3,6 @@ import Committee from "./Committee";
 
 const SCSTCell = () => {
   const members = [
-    //
-
-    // Dr. Kuldeep P. Waidya
-
-    // Principal
-
-    // Chairman
-
-    // 8983232009
-
-    // kpwaidya@gmail.com
-
-    // Ms. Jagruti R. Salve
-
-    // Lecturer
-
-    // Member
-
-    // 9579172245
-
-    // jagrutisalve2000@gmail.com
-
-    // Ms. Kajol B. Sonawane
-
-    // Lecturer
-
-    // Member Secretary
-
-    // 7378628859
-
-    // kajolsonawanesmkvp@gmail.com
-
-    // Mr. Aditya D.Sathe
-
-    // Student Representative
-
-    // Member
-
-    // 7498903482
-
-    // adsathe379@gmail.com
-
-    // Ms. Kajal R. Rokade
-
-    // Student Representative
-
-    // Member
-
-    // 8605888455
-
-    // rokadek595@gmail.com
-
-    // Ms. Gauri B. Vaydande
-
-    // Student Representative
-
-    // Member
-
-    // 7385286035
-
-    // b45838998@gmail.com
-
     {
       name: "Dr. Kuldeep P. Waidya",
       designation: "Principal",

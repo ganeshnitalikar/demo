@@ -1,13 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { facultyData } from "./facultyData";
+import { api } from "../../../config/api";
 import BreadCrumb from "../../Common/BreadCrumb";
 
 const FacultyDetails = () => {
   const { id } = useParams();
-  const navigate = useNavigate();
+  const [faculty, setFaculty] = useState(null);
+  const [loading, setLoading] = useState(true);
 
-  const faculty = facultyData.find((f) => f.id === parseInt(id));
+  useEffect(() => {
+    const fetchFacultyDetails = async () => {
+      try {
+        const response = await api.get(`/api/admin/faculty/${id}`);
+        setFaculty(response.data);
+      } catch (error) {
+        console.error("Error fetching faculty details:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchFacultyDetails();
+  }, [id]);
+
+  if (loading) {
+    return <h1 className="text-center mt-20">Loading faculty details...</h1>;
+  }
 
   if (!faculty) {
     return (
@@ -17,19 +35,8 @@ const FacultyDetails = () => {
 
   return (
     <>
-      <BreadCrumb />{" "}
       <div className="h-full flex flex-col items-center justify-center bg-gray-100 p-6">
-        {/*       
-    <button
-      onClick={() => navigate("/management/faculty")}
-      className="mb-4 bg-gray-600 text-white px-5 py-2 rounded-lg shadow-md hover:bg-gray-700 transition"
-    >
-      ← Back to Faculty List
-    </button> */}
-
-        {/* Faculty Card */}
         <div className="max-w-lg w-full bg-white shadow-lg rounded-lg overflow-hidden p-6 border border-gray-300">
-          {/* Image Section */}
           <div className="flex justify-center">
             <img
               src={faculty.photo}
@@ -38,7 +45,6 @@ const FacultyDetails = () => {
             />
           </div>
 
-          {/* Text Content */}
           <div className="text-center mt-4">
             <h1 className="text-3xl font-semibold text-gray-800">
               {faculty.name}
@@ -49,7 +55,6 @@ const FacultyDetails = () => {
             </p>
           </div>
 
-          {/* Info Section */}
           <div className="mt-4 space-y-2 text-gray-700">
             <p>
               <strong className="text-blue-600">Experience:</strong>{" "}
@@ -70,7 +75,7 @@ const FacultyDetails = () => {
             </p>
             <p>
               <strong className="text-blue-600">Joining Date:</strong>{" "}
-              {faculty.dateOfJoining}
+              {new Date(faculty.dateOfJoining).toLocaleDateString("en-GB")}
             </p>
           </div>
         </div>

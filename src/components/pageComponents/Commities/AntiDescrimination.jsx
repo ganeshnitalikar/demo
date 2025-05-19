@@ -1,7 +1,7 @@
 import React from "react";
 import Committee from "./Committee";
 
-const AntiDiscrimination = () => {
+const AntiDescrimination = () => {
   const members = [
     {
       name: "Dr. Kuldeep P. Waidya",
@@ -58,4 +58,4 @@ const AntiDiscrimination = () => {
   return <Committee name="Anti-Discrimination Cell" members={members} />;
 };
 
-export default AntiDiscrimination;
+export default AntiDescrimination;

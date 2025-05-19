@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+Allow: /sitemap.xml
+Allow: /about
+Allow: /academics
+Allow: /admissions
+Allow: /management
+Allow: /committees
+
+Disallow: /admin
+Disallow: /login
+Disallow: /api
+
+Sitemap: https://www.shraddhaedu.com/sitemap.xml 

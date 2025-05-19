@@ -1,41 +1,49 @@
 import { Link } from "react-router-dom";
 import { mail, mobileNumber, landline } from "../../constants.js";
+import { FaEnvelope, FaPhone, FaPhoneAlt, FaUser } from "react-icons/fa";
 
 const ContactBar = () => {
   return (
-    <nav className="bg-black text-white p-3 md:p-4">
-      <div className="container mx-auto">
-        <div className="flex flex-col md:flex-row justify-center items-center gap-2 md:gap-6 text-sm md:text-base">
+    <nav className="bg-black text-white py-2 md:py-3 w-full">
+      <div className="container mx-auto px-2 md:px-4">
+        <div className="flex flex-row justify-between items-center gap-2 md:gap-6 text-xs md:text-base">
           {/* Email */}
           <a
             href={`mailto:${mail}`}
-            className="hover:text-yellow-300 text-center"
+            className="flex items-center gap-1 md:gap-2 hover:text-yellow-300 transition-colors duration-200"
           >
-            {mail}
+            <FaEnvelope className="text-yellow-400 text-sm md:text-base" />
+            <span className="hidden sm:inline">{mail}</span>
+            <span className="sm:hidden">Email</span>
           </a>
 
           {/* Mobile Number */}
           <a
             href={`tel:${mobileNumber}`}
-            className="hover:text-yellow-300 text-center"
+            className="flex items-center gap-1 md:gap-2 hover:text-yellow-300 transition-colors duration-200"
           >
-            +91 {mobileNumber}
+            <FaPhone className="text-yellow-400 text-sm md:text-base" />
+            <span className="hidden sm:inline">+91 {mobileNumber}</span>
+            <span className="sm:hidden">Mobile</span>
           </a>
 
           {/* Landline */}
           <a
             href={`tel:${landline}`}
-            className="hover:text-yellow-300 text-center"
+            className="flex items-center gap-1 md:gap-2 hover:text-yellow-300 transition-colors duration-200"
           >
-            {landline}
+            <FaPhoneAlt className="text-yellow-400 text-sm md:text-base" />
+            <span className="hidden sm:inline">{landline}</span>
+            <span className="sm:hidden">Landline</span>
           </a>
 
           {/* Login Button */}
           <Link
             to="/login"
-            className="bg-yellow-400 text-blue-800 px-4 py-2 rounded hover:bg-yellow-500 text-center"
+            className="flex items-center gap-1 md:gap-2 bg-yellow-400 text-blue-800 px-2 md:px-4 py-1 md:py-2 rounded text-xs md:text-base hover:bg-yellow-500 transition-colors duration-200"
           >
-            Login
+            <FaUser className="text-sm md:text-base" />
+            <span>Login</span>
           </Link>
         </div>
       </div>
